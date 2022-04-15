@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function a() {
+        document.getElementById("demo1").innerHTML = " changed";
+      }
+
+      function sum() {
+        let a, b, c;
+        a = 4;
+        b = 3;
+        c = a + b;
+        document.getElementById("demo3").innerHTML = "sum is " + c + " ";
+      }
+
+      function multi() {
+        let a, b, c;
+        a = 4;
+        b = 3;
+        c = a * b;
+        document.getElementById("demo3").innerHTML = "result " + c + " ";
+      }
+      function diff() {
+        let a, b, c;
+        a = 4;
+        b = 3;
+        c = a - b;
+        document.getElementById("demo3").innerHTML = "result " + c + " ";
+      }
+
+      function divi() {
+        let a, b, c;
+        a = 4;
+        b = 3;
+        c = a / b;
+        document.getElementById("demo3").innerHTML = "result " + c + " ";
+
+        //document.write("done");
+      }
+
+      function changeimg() {
+        var image = document.getElementById("image");
+
+        if (image.src.match("imagesoff.jpg")) {
+          image.src = "imageson.jpg";
+        } else {
+          image.src = "imagesoff.jpg";
+        }
+      }
+
+      function day() {
+        var image = document.getElementById("image1");
+
+        if (image.src.match("day.jpg")) {
+          image.src = "night.jpg";
+        } else {
+          image.src = "day.jpg";
+        }
+      }
+    </script>
+
+    <style>
+      ul {
+        list-style: circle;
+        color: bisque;
+        margin: auto;
+        padding: 5px;
+      }
+
+      button {
+        background-color: blueviolet;
+      }
+      li {
+        display: inline;
+        width: fit-content;
+      }
+
+      a:hover {
+        background-color: rgb(38, 114, 201);
+        font-size: larger;
+      }
+    </style>
+
+    <link rel="stylesheet" href="firstcss.css" />
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <a href="https://www.google.com">Home</a>
+      </li>
+      <li>
+        <a href="https://www.google.com">Service</a>
+      </li>
+      <li>
+        <a href="https://www.google.com">Contact Us</a>
+      </li>
+    </ul>
+  </body>
+
+  <body>
+    <p id="demo">Java Script started</p>
+
+    <button
+      type="button"
+      onclick='document.getElementById("demo")
+    .innerHTML="My Java Script"'
+    >
+      click me
+    </button>
+
+    <p id="demo1">Not done</p>
+    <button type="button" onclick="a()">wanna change para name ?</button>
+
+    <button
+      type="button"
+      onclick='document.getElementById("demo2").innerHTML=Date()'
+    >
+      check date?
+    </button>
+    <p id="demo2">Date will be shown here</p>
+
+    <h4>calulator</h4>
+    <p id="demo3"></p>
+    <button type="button" onclick="sum()">sum</button>
+
+    <button type="button" onclick="multi()">multiply</button>
+
+    <button type="button" onclick="diff()">subtract</button>
+
+    <button type="button" onclick="divi()">divide</button>
+
+    <img
+      id="image"
+      onclick="changeimg()"
+      src="imagesoff.jpg"
+      width="150"
+      height="250"
+    />
+
+    <br />
+    <br />
+    <img id="image1" src="day.jpg" width="150" height="250" /><br />
+
+    <button type="button" onclick="day()">Change Photo</button>
+
+    <h4>another program</h4>
+
+    <button type="button" onclick="document.write(welcome)">done2</button>
+    <p id="p2"></p>
+  </body>
+</html>

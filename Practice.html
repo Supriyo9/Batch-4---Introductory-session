@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+
+      .button {
+        background-color: brown;
+        border-radius: 20px;
+        box-sizing: border-box;
+        color: antiquewhite;
+        min-height: 30px;
+        min-width: 120px;
+        padding: 10px;
+        margin: 5px;
+      }
+      p {
+        color: rgb(81, 21, 122);
+      }
+      .button:hover {
+        background-color: #002ead;
+        transition: 0.7s;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p>Array</p>
+    <p id="demo3"></p>
+    <p>Objects</p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <h3>string seaching</h3>
+    <p id="demo9"></p>
+
+    <h2>sort</h2>
+
+    <p id="arrreslt"></p>
+
+    <h1>reverse</h1>
+
+    <p id="dm"></p>
+
+    <script>
+      let a = 5 + "sp";
+
+      let b = "I have scored ";
+      let c = '"100 %"';
+      document.getElementById("demo").innerHTML = a;
+      document.getElementById("demo2").innerHTML = b + "<br>" + c;
+
+      const name = ["Jarvis", "vandana", "Ashutosh", "pritam"];
+
+      document.getElementById("demo3").innerHTML = name[1];
+
+      const student = { name: "Ashutosh", lname: "Roy", grade: "A" };
+
+      const marks = { a: 67, b: 87, c: 89, d: 87 };
+
+      document.getElementById("demo4").innerHTML =
+        student.name +
+        " " +
+        student.lname +
+        " is a good boy" +
+        " have " +
+        student.grade +
+        " with " +
+        marks.d +
+        " marks";
+
+      function sum(a, b) {
+        return a + b;
+      }
+
+      document.getElementById("demo5").innerHTML = "sum is " + sum(3, 6);
+
+      function rev(s) {
+        var k = "";
+
+        for (var i = s.length - 1; i >= 0; i--) {
+          k = k + s[i];
+        }
+
+        return k;
+      }
+
+      document.getElementById("demo6").innerHTML = rev("12345");
+
+      // var h = window.prompt("What is your name");
+      // document.write("my name is " + h);
+
+      let arr = [67, 87, 89, 87];
+
+      for (var i = 0; i < arr.length; i++) {
+        document.write(arr[i] + ",");
+      }
+
+      function pshelemnt() {
+        var h = window.prompt("Enter element to psh");
+
+        arr.push(h);
+
+        for (var i = 0; i < arr.length; i++) {
+          document.write(arr[i]);
+        }
+      }
+
+      function popelemnt() {
+        arr.pop();
+        for (var i = 0; i < arr.length; i++) {
+          document.write(arr[i]);
+        }
+      }
+
+      function shiftt() {
+        arr.shift();
+        for (var i = 0; i < arr.length; i++) {
+          document.write(arr[i]);
+        }
+      }
+
+      function unshiftt() {
+        arr.unshift();
+        for (var i = 0; i < arr.length; i++) {
+          document.write(arr[i]);
+        }
+      }
+
+      arr.sort();
+
+      document.getElementById("arrreslt").innerHTML = arr;
+      arr.reverse();
+      document.getElementById("dm").innerHTML = arr;
+
+      function displayDate() {
+        document.getElementById("demo8").innerHTML = Date();
+      }
+
+      let str = "hi name is sp";
+
+      document.getElementById("demo9").innerHTML = str.indexOf("sp");
+    </script>
+
+    <button id="psh1" type="button" class="button" onclick="pshelemnt()">
+      Click here to push element
+    </button>
+    <button id="pop1" type="button" class="button" onclick="popelemnt()">
+      Click here to pop element
+    </button>
+
+    <button id="shift1" type="button" class="button" onclick="shiftt()">
+      Click here to shift element
+    </button>
+
+    <button id="unshift1" type="button" class="button" onclick="unshiftt()">
+      Click here to un shift element
+    </button>
+    <button onclick="document.getElementById('demo7').innerHTML=Date()">
+      time
+    </button>
+
+    <button onclick="displayDate()">date</button>
+  </body>
+</html>

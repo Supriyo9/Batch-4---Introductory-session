@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>String Operations</h3>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <p id="demo15"></p>
+
+    <h3>if statement</h3>
+    <p id="demo16"></p>
+
+    <h3>switch</h3>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+
+    <script>
+      let str = "hi my name is sp";
+
+      let st = "pandit";
+
+      document.getElementById("demo").innerHTML = str.indexOf("sp");
+      document.getElementById("demo1").innerHTML = str + " " + st;
+
+      document.getElementById("demo2").innerHTML = st.slice(1, 4);
+
+      document.getElementById("demo3").innerHTML = str.toLocaleUpperCase();
+
+      document.getElementById("demo4").innerHTML = st.toLowerCase();
+      document.getElementById("demo5").innerHTML = str.match("nam");
+
+      document.getElementById("demo6").innerHTML = str.length;
+
+      const d = new Date();
+
+      document.getElementById("demo7").innerHTML = d.getMonth();
+      document.getElementById("demo8").innerHTML = d.getDay();
+      document.getElementById("demo9").innerHTML = d.getHours();
+      document.getElementById("demo10").innerHTML = d.getMinutes();
+      document.getElementById("demo11").innerHTML = d.getSeconds();
+      document.getElementById("demo12").innerHTML = d.getMilliseconds();
+      document.getElementById("demo13").innerHTML = d.getTimezoneOffset();
+      document.getElementById("demo14").innerHTML = d.getDate();
+
+      function reverseString(str) {
+        let newStr = "";
+        for (let i = str.length - 1; i >= 0; i--) {
+          newStr += str[i];
+        }
+        return newStr;
+      }
+      const string = prompt("Enter a string: ");
+      const result = reverseString(string);
+      document.getElementById("demo15").innerHTML = result;
+
+      const mint = new Date().getMinutes();
+
+      let a;
+      if (mint < 10) {
+        a = "hi less than 10";
+      } else if (mint < 20) {
+        a = "hi less than 20";
+      } else {
+        a = "hello ";
+      }
+
+      document.getElementById("demo16").innerHTML = a;
+
+      let day;
+      switch (new Date().getDay()) {
+        case 1:
+          day = "sun";
+
+          break;
+        case 2:
+          day = "mon";
+
+          break;
+        case 3:
+          day = "tue";
+
+          break;
+        case 4:
+          day = "wed";
+
+          break;
+        case 5:
+          day = "thu";
+
+          break;
+        case 6:
+          day = "fri";
+
+          break;
+        case 1:
+          day = "sat";
+
+          break;
+        default:
+          day = "wrong";
+      }
+      document.getElementById("demo17").innerHTML = day;
+
+      let da;
+      switch (4) {
+        case 1:
+          da = "jan";
+
+          break;
+        case 2:
+          da = "feb";
+
+          break;
+        case 3:
+          da = "mar";
+
+          break;
+        case 4:
+          da = "apr";
+
+          break;
+        case 5:
+          da = "may";
+
+          break;
+        case 6:
+          da = "jun";
+      }
+
+      document.getElementById("demo18").innerHTML = da;
+    </script>
+  </body>
+</html>
